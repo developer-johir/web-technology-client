@@ -2,7 +2,7 @@ import React from 'react';
 
 
 
-const Courses = ({category}) => {
+const Courses = () => {
 
     return (
         <div>
