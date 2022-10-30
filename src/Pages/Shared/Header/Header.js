@@ -9,7 +9,7 @@ import logo from "../../../images/web-logo.png"
 const Header = () => {
   return (
     <div>
-      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+      <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark">
         <Container>
           <div className="d-flex align-items-center">
             <img className="header-img" src={logo} alt="" />

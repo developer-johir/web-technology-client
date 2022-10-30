@@ -1,10 +1,13 @@
 import React from 'react';
-// import img from "../../../public/images"
+import img from "../../images/Web-Technology.png"
+import './Home.css'
 
 const Home = () => {
     return (
         <div>
-            <h2>This is Home</h2>
+            <div className='header-banner'>
+                <img className="img-fluid" src={img} alt="" />
+            </div>
         </div>
     );
 };
