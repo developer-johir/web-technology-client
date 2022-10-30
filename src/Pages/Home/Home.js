@@ -1,4 +1,5 @@
 import React from 'react';
+// import img from "../../../public/images"
 
 const Home = () => {
     return (

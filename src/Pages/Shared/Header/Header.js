@@ -4,6 +4,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { Link } from "react-router-dom";
 import './Header.css'
+import logo from "../../../images/web-logo.png"
 
 const Header = () => {
   return (
@@ -11,7 +12,7 @@ const Header = () => {
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
         <Container>
           <div className="d-flex align-items-center">
-            <img className="header-img" src="https://www.kindpng.com/picc/m/42-423529_the-one-web-technology-web-technology-logo-hd.png" alt="" />
+            <img className="header-img" src={logo} alt="" />
             <h2 className="text-dark ms-2"><Link className="text-decoration-none text-white" to='/'>Web Technology</Link></h2>
           </div>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
