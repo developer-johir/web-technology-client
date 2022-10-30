@@ -1,9 +1,13 @@
 import React from 'react';
 
-const Courses = () => {
+
+
+const Courses = ({category}) => {
+    // const allCourse = useLoaderData();
+
     return (
         <div>
-            <h2>This is Courses</h2>
+            <h4>ghygyu {category}</h4>
         </div>
     );
 };
