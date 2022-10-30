@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -6,8 +6,19 @@ import { Link } from "react-router-dom";
 import './Header.css'
 import logo from "../../../images/web-logo.png"
 import Toggle from "../Toggle/Toggle";
+import { Button, Image } from 'react-bootstrap';
+import { FaUser } from 'react-icons/fa';
+import { AuthContext } from "../../../contexts/AuthProvider/AuthProvider";
 
 const Header = () => {
+  const { user, logOut } = useContext(AuthContext);
+
+    const handleLogOut = () => {
+        logOut()
+            .then(() => { })
+            .catch(error => console.error(error))
+    }
+
   return (
     <div>
       <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark">
@@ -25,7 +36,34 @@ const Header = () => {
               <Link className="text-decoration-none text-white me-3" to='/course'>Course</Link>
               <Link className="text-decoration-none text-white me-3" to='/faq'>FAQ</Link>
               <Link className="text-decoration-none text-white me-3" to='/blog'>Blog</Link>
-              <Toggle></Toggle>
+
+                        <>
+                            {
+                                user?.uid ?
+                                    <>
+                                        <span>{user?.displayName}</span>
+                                        <Button variant="light" onClick={handleLogOut}>Log out</Button>
+                                    </>
+                                    :
+                                    <>
+                                        <Link className="text-decoration-none text-white me-3" to='/login'>Login</Link>
+                                        <Link className="text-decoration-none text-white me-3" to='/register'>Register</Link>
+                                    </>
+                            }
+                        </>
+
+                        <Link className="text-decoration-none text-white me-3" to='/profile' href="#memes">
+                            {user?.photoURL ?
+                                <Image
+                                    style={{ height: '30px' }}
+                                    roundedCircle
+                                    src={user?.photoURL}>
+                                </Image>
+                                : <FaUser></FaUser>
+                            }
+                        </Link>
+
+                        <Toggle></Toggle>
             </Nav>
           </Navbar.Collapse>
         </Container>

@@ -6,31 +6,28 @@ import CourseCard from '../Shared/CourseCard/CourseCard';
 import './Course.css'
 
 const Course = () => {
-    const allCourse = useLoaderData();
-    console.log(allCourse);
-    return (
-        <div>
-            <Container>
-                <Row>
-                    <Col lg="3">
-                        <Category></Category>
-                    </Col>
-                    <Col lg="9" className='m- m-auto py-5'>
-                        <Row className=''>
-                            <Col lg="4" className='course-card'>
-                            {
-                                allCourse.map(course => <CourseCard
-                                    key={course._id}
-                                    course={course}
-                                ></CourseCard>)
-                            }
-                            </Col>
-                        </Row>
-                    </Col>
-                </Row>
-            </Container>
-        </div>
-    );
+  const allCourse = useLoaderData();
+
+  return (
+    <div>
+      <Container>
+        <Row>
+          <Col lg="3">
+            <Category></Category>
+          </Col>
+          <Col lg="9" className="m- m-auto py-5">
+            <Row className="">
+              <Col lg="4" className="course-card">
+                {allCourse.map((course) => (
+                  <CourseCard key={course._id} course={course}></CourseCard>
+                ))}
+              </Col>
+            </Row>
+          </Col>
+        </Row>
+      </Container>
+    </div>
+  );
 };
 
 export default Course;
