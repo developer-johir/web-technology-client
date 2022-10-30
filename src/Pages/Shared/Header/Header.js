@@ -13,7 +13,7 @@ const Header = () => {
       <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark">
         <Container>
           <div className="d-flex align-items-center">
-            <img className="header-img" src={logo} alt="" />
+            <Link to='/'><img className="header-img" src={logo} alt="" /></Link>
             <h2 className="text-dark ms-2"><Link className="text-decoration-none text-white" to='/'>Web Technology</Link></h2>
           </div>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />

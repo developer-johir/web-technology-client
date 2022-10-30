@@ -4,11 +4,9 @@ import Card from "react-bootstrap/Card";
 
 const CourseCard = ({ course }) => {
   return (
-    <div>
-      {/* <p>{course.author.img}</p>
-      <img src={course.thumbnail_url} alt="" /> */}
+    <div className="d-flex">
       <Card style={{ width: "18rem" }}>
-        <Card.Img variant="top" src={course.thumbnail_url} />
+        <Card.Img className="" variant="top" src={course.thumbnail_url} />
         <Card.Body>
           <Card.Title>{course.title}</Card.Title>
           <Card.Text>
