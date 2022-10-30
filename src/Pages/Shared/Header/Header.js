@@ -5,6 +5,7 @@ import Navbar from "react-bootstrap/Navbar";
 import { Link } from "react-router-dom";
 import './Header.css'
 import logo from "../../../images/web-logo.png"
+import Toggle from "../Toggle/Toggle";
 
 const Header = () => {
   return (
@@ -20,10 +21,11 @@ const Header = () => {
             <Nav className="me-auto">
             </Nav>
             <Nav>
-              <Link className="text-decoration-none text-white" to='/'>Home</Link>
-              <Link className="text-decoration-none text-white" to='/course'>Course</Link>
-              <Link className="text-decoration-none text-white" to='/faq'>FAQ</Link>
-              <Link className="text-decoration-none text-white" to='/blog'>Blog</Link>
+              <Link className="text-decoration-none text-white me-3" to='/'>Home</Link>
+              <Link className="text-decoration-none text-white me-3" to='/course'>Course</Link>
+              <Link className="text-decoration-none text-white me-3" to='/faq'>FAQ</Link>
+              <Link className="text-decoration-none text-white me-3" to='/blog'>Blog</Link>
+              <Toggle></Toggle>
             </Nav>
           </Navbar.Collapse>
         </Container>
