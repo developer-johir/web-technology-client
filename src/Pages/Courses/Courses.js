@@ -7,7 +7,7 @@ const Courses = ({category}) => {
 
     return (
         <div>
-            <h4>ghygyu {category}</h4>
+            <h4>This is Courses</h4>
         </div>
     );
 };

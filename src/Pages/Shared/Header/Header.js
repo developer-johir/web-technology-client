@@ -22,6 +22,8 @@ const Header = () => {
             <Nav>
               <Link className="text-decoration-none text-white" to='/'>Home</Link>
               <Link className="text-decoration-none text-white" to='/course'>Course</Link>
+              <Link className="text-decoration-none text-white" to='/faq'>FAQ</Link>
+              <Link className="text-decoration-none text-white" to='/blog'>Blog</Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
