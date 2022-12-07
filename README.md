@@ -1,3 +1,10 @@
+1. Name: Web Technology
+2. Live Link: https://web-technology-951a6.web.app/
+3. This is an online course-related website.Here, Every user can see all course details without login in. And download the course details page in pdf format.
+4. The user image is shown in the navbar if the user image is available.
+5. Users can buy a course and make payment for that course.
+6. Technology:React, React Router, BootStrap, Express.js, Firebase, etc.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
